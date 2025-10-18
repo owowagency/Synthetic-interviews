@@ -4,7 +4,7 @@ import { Memory } from "@mastra/memory";
 import { LibSQLStore } from "@mastra/libsql";
 
 export const questionGeneratorAgent = new Agent({
-  name: "Question generator agent",
+  name: "Question generator GenieBi agent",
   instructions: `
       You are a helpful assistant that generates questions for a survey.Generate interview questions following The Mom Test principles which are focused on providing financial insights, managing software license costs, and addressing common frustrations related to financial 
    reporting and data analysis for businesses.
