@@ -7,8 +7,14 @@ import { personaAgent } from "./agents/persona-agent";
 import { questionGeneratorAgent } from "./agents/qestionGenerator-agent";
 import { persona1Agent } from "./agents/sarahTompson-agent";
 import { questionGeneratorWampAgent } from "./agents/questionWamp-agent";
+import { VercelDeployer } from "@mastra/deployer-vercel";
 
 export const mastra = new Mastra({
+  deployer: new VercelDeployer({
+    maxDuration: 600,
+    memory: 1536,
+    regions: ["sfo1", "iad1"],
+  }),
   workflows: { weatherWorkflow },
   agents: {
     weatherAgent,
@@ -18,7 +24,7 @@ export const mastra = new Mastra({
     questionGeneratorWampAgent,
   },
   storage: new LibSQLStore({
-    // Use in-memory storage for now
+    // stores telemetry, evals, ... into memory storage, if it needs to persist, change to file:../mastra.db
     url: ":memory:",
   }),
   logger: new PinoLogger({
