@@ -46,7 +46,7 @@ export const persona1Agent = new Agent({
   model: openai("gpt-4o-mini"),
   memory: new Memory({
     storage: new LibSQLStore({
-      url: "file:../mastra.db", // path is relative to the .mastra/output directory
+      url: ":memory:",
     }),
   }),
 });

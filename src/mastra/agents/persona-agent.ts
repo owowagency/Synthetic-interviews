@@ -91,7 +91,7 @@ Communication style: How do they typically respond to questions? Long detailed a
   model: openai("gpt-5-nano"),
   memory: new Memory({
     storage: new LibSQLStore({
-      url: "file:../mastra.db", // path is relative to the .mastra/output directory
+      url: ":memory:",
     }),
   }),
 });

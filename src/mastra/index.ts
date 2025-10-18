@@ -18,7 +18,7 @@ export const mastra = new Mastra({
     questionGeneratorWampAgent,
   },
   storage: new LibSQLStore({
-    // stores telemetry, evals, ... into memory storage, if it needs to persist, change to file:../mastra.db
+    // Use in-memory storage for now
     url: ":memory:",
   }),
   logger: new PinoLogger({
