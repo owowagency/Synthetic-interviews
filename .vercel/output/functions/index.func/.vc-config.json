@@ -1,0 +1,12 @@
+{
+  "handler": "index.mjs",
+  "launcherType": "Nodejs",
+  "runtime": "nodejs24.x",
+  "shouldAddHelpers": true,
+  "maxDuration": 600,
+  "memory": 1536,
+  "regions": [
+    "sfo1",
+    "iad1"
+  ]
+}
