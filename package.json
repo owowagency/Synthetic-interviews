@@ -31,5 +31,10 @@
     "@types/node": "^24.6.2",
     "mastra": "^0.14.1",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "@mastra/core": "^0.21.1",
+    "@mastra/server": "^0.21.1",
+    "@mastra/deployer": "^0.21.1"
   }
 }
